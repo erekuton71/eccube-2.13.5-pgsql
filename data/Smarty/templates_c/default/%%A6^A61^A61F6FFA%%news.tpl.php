@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.27, created on 2017-02-21 01:09:41
+<?php /* Smarty version 2.6.27, created on 2017-02-26 23:43:12
          compiled from /vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/frontparts/bloc/news.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'script_escape', '/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/frontparts/bloc/news.tpl', 26, false),array('modifier', 'explode', '/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/frontparts/bloc/news.tpl', 30, false),array('modifier', 'h', '/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/frontparts/bloc/news.tpl', 39, false),array('modifier', 'nl2br', '/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/frontparts/bloc/news.tpl', 39, false),)), $this); ?>
