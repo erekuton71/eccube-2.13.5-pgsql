@@ -75,6 +75,42 @@
                     <span class="attention"> (上限3000文字)</span>
                 </td>
             </tr>
+            <tr>
+                <th>表示開始期限<span class="attention"> *</span></th>
+                <td>
+                    <!--{if $arrErr.year || $arrErr.month || $arrErr.day}--><span class="attention"><!--{$arrErr.year}--><!--{$arrErr.month}--><!--{$arrErr.day}--></span><!--{/if}-->
+                    <select name="year" <!--{if $arrErr.year || $arrErr.month || $arrErr.day }-->style="background-color:<!--{$smarty.const.ERR_COLOR|h}-->"<!--{/if}-->>
+                    <option value="" selected="selected">----</option>
+                    <!--{html_options options=$arrYear selected=$arrForm.year.value}-->
+                    </select>年
+                    <select name="month" <!--{if $arrErr.year || $arrErr.month || $arrErr.day}-->style="background-color:<!--{$smarty.const.ERR_COLOR|h}-->"<!--{/if}-->>
+                    <option value="" selected="selected">--</option>
+                    <!--{html_options options=$arrMonth selected=$arrForm.month.value}-->
+                    </select>月
+                    <select name="day" <!--{if $arrErr.year || $arrErr.month || $arrErr.day}-->style="background-color:<!--{$smarty.const.ERR_COLOR|h}-->"<!--{/if}-->>
+                    <option value="" selected="selected">--</option>
+                    <!--{html_options options=$arrDay selected=$arrForm.day.value}-->
+                    </select>日
+                </td>
+            </tr>
+            <tr>
+                <th>表示終了期限<span class="attention"> *</span></th>
+                <td>
+                    <!--{if $arrErr.year || $arrErr.month || $arrErr.day}--><span class="attention"><!--{$arrErr.year}--><!--{$arrErr.month}--><!--{$arrErr.day}--></span><!--{/if}-->
+                    <select name="year" <!--{if $arrErr.year || $arrErr.month || $arrErr.day }-->style="background-color:<!--{$smarty.const.ERR_COLOR|h}-->"<!--{/if}-->>
+                    <option value="" selected="selected">----</option>
+                    <!--{html_options options=$arrYear selected=$arrForm.year.value}-->
+                    </select>年
+                    <select name="month" <!--{if $arrErr.year || $arrErr.month || $arrErr.day}-->style="background-color:<!--{$smarty.const.ERR_COLOR|h}-->"<!--{/if}-->>
+                    <option value="" selected="selected">--</option>
+                    <!--{html_options options=$arrMonth selected=$arrForm.month.value}-->
+                    </select>月
+                    <select name="day" <!--{if $arrErr.year || $arrErr.month || $arrErr.day}-->style="background-color:<!--{$smarty.const.ERR_COLOR|h}-->"<!--{/if}-->>
+                    <option value="" selected="selected">--</option>
+                    <!--{html_options options=$arrDay selected=$arrForm.day.value}-->
+                    </select>日
+                </td>
+            </tr>
         </table>
         <!--{* ▲登録テーブルここまで *}-->
 
