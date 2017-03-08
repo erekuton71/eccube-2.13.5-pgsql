@@ -137,11 +137,13 @@
         <input type="hidden" name="rank" value="" />
         <table class="list">
             <col width="5%" />
-            <col width="15%" />
-            <col width="45%" />
+            <col width="10%" />
+            <col width="35%" />
+            <col width="10%" />
+            <col width="10%" />
             <col width="5%" />
             <col width="5%" />
-            <col width="25%" />
+            <col width="20%" />
             <tr>
                 <th>順位</th>
                 <th>日付</th>
@@ -164,6 +166,8 @@
                     <!--{else}--><!--{$arrNews[data].news_title|h|nl2br}-->
                     <!--{/if}-->
                 </td>
+                <td><!--{$arrNews[data].cast_start_date|date_format:"%Y/%m/%d"}--></td>
+                <td><!--{$arrNews[data].cast_end_date|date_format:"%Y/%m/%d"}--></td>
                 <td>
                     <!--{if $arrNews[data].news_id != $tpl_news_id}-->
                     <a href="#" onclick="eccube.fnFormModeSubmit('move','pre_edit','news_id','<!--{$arrNews[data].news_id|h}-->'); return false;">編集</a>

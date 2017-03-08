@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.27, created on 2017-03-08 17:53:05
+<?php /* Smarty version 2.6.27, created on 2017-03-09 01:05:51
          compiled from contents/index.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'script_escape', 'contents/index.tpl', 27, false),array('modifier', 'default', 'contents/index.tpl', 29, false),array('modifier', 'h', 'contents/index.tpl', 29, false),array('modifier', 'date_format', 'contents/index.tpl', 159, false),array('modifier', 'nl2br', 'contents/index.tpl', 161, false),array('function', 'html_options', 'contents/index.tpl', 38, false),array('function', 'math', 'contents/index.tpl', 158, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'script_escape', 'contents/index.tpl', 27, false),array('modifier', 'default', 'contents/index.tpl', 29, false),array('modifier', 'h', 'contents/index.tpl', 29, false),array('modifier', 'date_format', 'contents/index.tpl', 161, false),array('modifier', 'nl2br', 'contents/index.tpl', 163, false),array('function', 'html_options', 'contents/index.tpl', 38, false),array('function', 'math', 'contents/index.tpl', 160, false),)), $this); ?>
 
 <div id="admin-contents" class="contents-main">
     <form name="form1" id="form1" method="post" action="?">
@@ -164,11 +164,13 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'script_esca
         <input type="hidden" name="rank" value="" />
         <table class="list">
             <col width="5%" />
-            <col width="15%" />
-            <col width="45%" />
+            <col width="10%" />
+            <col width="35%" />
+            <col width="10%" />
+            <col width="10%" />
             <col width="5%" />
             <col width="5%" />
-            <col width="25%" />
+            <col width="20%" />
             <tr>
                 <th>順位</th>
                 <th>日付</th>
@@ -223,6 +225,10 @@ $this->_sections['data']['last']       = ($this->_sections['data']['iteration'] 
 
                     <?php endif; ?>
                 </td>
+                <td><?php echo ((is_array($_tmp=((is_array($_tmp=$this->_tpl_vars['arrNews'][$this->_sections['data']['index']]['cast_start_date'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)))) ? $this->_run_mod_handler('date_format', true, $_tmp, "%Y/%m/%d") : smarty_modifier_date_format($_tmp, "%Y/%m/%d")); ?>
+</td>
+                <td><?php echo ((is_array($_tmp=((is_array($_tmp=$this->_tpl_vars['arrNews'][$this->_sections['data']['index']]['cast_end_date'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)))) ? $this->_run_mod_handler('date_format', true, $_tmp, "%Y/%m/%d") : smarty_modifier_date_format($_tmp, "%Y/%m/%d")); ?>
+</td>
                 <td>
                     <?php if (((is_array($_tmp=$this->_tpl_vars['arrNews'][$this->_sections['data']['index']]['news_id'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)) != ((is_array($_tmp=$this->_tpl_vars['tpl_news_id'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp))): ?>
                     <a href="#" onclick="eccube.fnFormModeSubmit('move','pre_edit','news_id','<?php echo ((is_array($_tmp=((is_array($_tmp=$this->_tpl_vars['arrNews'][$this->_sections['data']['index']]['news_id'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)))) ? $this->_run_mod_handler('h', true, $_tmp) : smarty_modifier_h($_tmp)); ?>
