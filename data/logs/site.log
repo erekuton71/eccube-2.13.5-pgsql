@@ -8,3 +8,9 @@
 2017/02/26 23:25:47 [/eccube-2.13.5-pgsql/html/index.php] PAGE_DISPLAY_TIME_LOG [2.09sec] from 192.168.55.1
 2017/02/26 23:43:03 [/eccube-2.13.5-pgsql/html/index.php] PAGE_DISPLAY_TIME_LOG [2.41sec] from 192.168.55.1
 2017/02/26 23:43:13 [/eccube-2.13.5-pgsql/html/index.php] PAGE_DISPLAY_TIME_LOG [2.12sec] from 192.168.55.1
+2017/03/07 17:06:31 [/eccube-2.13.5-pgsql/html/index.php] PAGE_DISPLAY_TIME_LOG [2.00sec] from 192.168.55.1
+2017/03/07 18:09:20 [/eccube-2.13.5-pgsql/html/index.php] PAGE_DISPLAY_TIME_LOG [2.58sec] from 192.168.55.1
+2017/03/07 18:09:31 [/eccube-2.13.5-pgsql/html/index.php] PAGE_DISPLAY_TIME_LOG [3.50sec] from 192.168.55.1
+2017/03/07 18:09:42 [/eccube-2.13.5-pgsql/html/index.php] PAGE_DISPLAY_TIME_LOG [2.58sec] from 192.168.55.1
+2017/03/07 18:09:51 [/eccube-2.13.5-pgsql/html/index.php] PAGE_DISPLAY_TIME_LOG [2.31sec] from 192.168.55.1
+2017/03/08 13:50:58 [/eccube-2.13.5-pgsql/html/index.php] PAGE_DISPLAY_TIME_LOG [3.17sec] from 192.168.55.1

@@ -1,0 +1,38 @@
+2017/03/08 17:31:36 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date, cast(startdate as date) as cast_startdate, cast(enddate as date) as cast_enddate FROM dtb_news WHERE del_flg = 0  ORDER BY rank DESC ]
+MDB2 Error: no such field
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_258202c4d10c6f75a2b398a474fb46efc4d1aa29b]
+[Native message: ERROR:  column "startdate" does not exist
+行 1: ..., cast(news_date as date) as cast_news_date, cast(startdate ...
+                                                           ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[2h82977vugvr263pmcr312rgn0]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(54): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(77): LC_Page_Admin_Contents->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(168): SC_Helper_News->getList
+/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_News.php(78): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2017/03/08 17:31:55 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date, cast(startdate as date) as cast_startdate, cast(enddate as date) as cast_enddate FROM dtb_news WHERE del_flg = 0  ORDER BY rank DESC ]
+MDB2 Error: no such field
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_2c55e4a00825c0c81d71445d86f3724d3f8cac2db]
+[Native message: ERROR:  column "startdate" does not exist
+行 1: ..., cast(news_date as date) as cast_news_date, cast(startdate ...
+                                                           ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[p1l9ptnj51qkjhe18k9jgs0qt0]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(54): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(77): LC_Page_Admin_Contents->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(168): SC_Helper_News->getList
+/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_News.php(78): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
