@@ -48,6 +48,16 @@ class LC_Page_Admin_Contents extends LC_Page_Admin_Ex
             'month' => date('n'),
             'day' => date('j'),
         );
+        /*$this->arrFormStart = array(
+            'start_year' => date('Y'),
+            'start_month' => date('n'),
+            'start_day' => date('j'),
+        );
+        $this->arrFormEnd = array(
+            'end_year' => date('Y'),
+            'end_month' => date('n'),
+            'end_day' => date('j'),
+        );*/
         $this->tpl_maintitle = 'コンテンツ管理';
         $this->tpl_subtitle = '新着情報管理';
         //---- 日付プルダウン設定
@@ -112,6 +122,8 @@ class LC_Page_Admin_Contents extends LC_Page_Admin_Ex
             case 'pre_edit':
                 $news = $objNews->getNews($news_id);
                 list($news['year'],$news['month'],$news['day']) = $this->splitNewsDate($news['cast_news_date']);
+                list($news['start_year'],$news['start_month'],$news['start_day']) = $this->splitStartDate($news['cast_start_date']);
+                list($news['end_year'],$news['end_month'],$news['end_day']) = $this->splitEndDate($news['cast_end_date']);
                 $objFormParam->setParam($news);
 
                 // POSTデータを引き継ぐ
@@ -169,6 +181,9 @@ class LC_Page_Admin_Contents extends LC_Page_Admin_Ex
         $objErr = new SC_CheckError_Ex($objFormParam->getHashArray());
         $objErr->arrErr = $objFormParam->checkError();
         $objErr->doFunc(array('日付', 'year', 'month', 'day'), array('CHECK_DATE'));
+        $objErr->doFunc(array('表示開始期限', 'start_year', 'start_month', 'start_day'), array('CHECK_DATE'));
+        $objErr->doFunc(array('表示終了期限', 'end_year', 'end_month', 'end_day'), array('CHECK_DATE'));
+
 
         return $objErr->arrErr;
     }
@@ -186,6 +201,12 @@ class LC_Page_Admin_Contents extends LC_Page_Admin_Ex
         $objFormParam->addParam('タイトル', 'news_title', MTEXT_LEN, 'KVa', array('EXIST_CHECK','MAX_LENGTH_CHECK','SPTAB_CHECK'));
         $objFormParam->addParam('URL', 'news_url', URL_LEN, 'KVa', array('MAX_LENGTH_CHECK'));
         $objFormParam->addParam('本文', 'news_comment', LTEXT_LEN, 'KVa', array('MAX_LENGTH_CHECK'));
+        $objFormParam->addParam('表示開始期限(年)', 'start_year', INT_LEN, 'n', array('EXIST_CHECK', 'NUM_CHECK', 'MAX_LENGTH_CHECK'));
+        $objFormParam->addParam('表示開始期限(月)', 'start_month', INT_LEN, 'n', array('EXIST_CHECK', 'NUM_CHECK', 'MAX_LENGTH_CHECK'));
+        $objFormParam->addParam('表示開始期限(日)', 'start_day', INT_LEN, 'n', array('EXIST_CHECK', 'NUM_CHECK', 'MAX_LENGTH_CHECK'));
+        $objFormParam->addParam('表示終了期限(年)', 'end_year', INT_LEN, 'n', array('EXIST_CHECK', 'NUM_CHECK', 'MAX_LENGTH_CHECK'));
+        $objFormParam->addParam('表示終了期限(月)', 'end_month', INT_LEN, 'n', array('EXIST_CHECK', 'NUM_CHECK', 'MAX_LENGTH_CHECK'));
+        $objFormParam->addParam('表示終了期限(日)', 'end_day', INT_LEN, 'n', array('EXIST_CHECK', 'NUM_CHECK', 'MAX_LENGTH_CHECK'));
         $objFormParam->addParam('別ウィンドウで開く', 'link_method', INT_LEN, 'n', array('NUM_CHECK', 'MAX_LENGTH_CHECK'));
     }
 
@@ -204,6 +225,10 @@ class LC_Page_Admin_Contents extends LC_Page_Admin_Ex
         $sqlval['link_method'] = $this->checkLinkMethod($sqlval['link_method']);
         $sqlval['news_date'] = $this->getRegistDate($sqlval);
         unset($sqlval['year'], $sqlval['month'], $sqlval['day']);
+        $sqlval['start_date'] = $this->getStartDate($sqlval);
+        unset($sqlval['start_year'], $sqlval['start_month'], $sqlval['start_day']);
+        $sqlval['end_date'] = $this->getEndDate($sqlval);
+        unset($sqlval['end_year'], $sqlval['end_month'], $sqlval['end_day']);
 
         return $objNews->saveNews($sqlval);
     }
@@ -221,6 +246,32 @@ class LC_Page_Admin_Contents extends LC_Page_Admin_Ex
     }
 
     /**
+     * 表示終了期限を返す。
+     * @param  Array  $arrPost POSTのグローバル変数
+     * @return string 表示開始期限を示す文字列
+     */
+    public function getStartDate($arrPost)
+    {
+        $startDate = $arrPost['start_year'] .'/'. $arrPost['start_month'] .'/'. $arrPost['start_day'];
+
+        return $startDate;
+
+    }
+
+    /**
+     * 表示終了期限を返す。
+     * @param  Array  $arrPost POSTのグローバル変数
+     * @return string 表示終了期限を示す文字列
+     */
+    public function getEndDate($arrPost)
+    {
+        $endDate = $arrPost['end_year'] .'/'. $arrPost['end_month'] .'/'. $arrPost['end_day'];
+
+        return $endDate;
+
+    }
+
+    /**
      * チェックボックスの値が空の時は無効な値として1を格納する
      * @param  int $link_method
      * @return int
@@ -235,14 +286,24 @@ class LC_Page_Admin_Contents extends LC_Page_Admin_Ex
     }
 
     /**
-     * ニュースの日付の値をフロントでの表示形式に合わせるために分割
-     * @param String $news_date
+     * ニュースの日付、表示開始期限、表示終了期限の値をフロントでの表示形式に合わせるために分割
+     * @param String $news_date,$start_date,$end_date
      */
     public function splitNewsDate($news_date)
     {
         return explode('-', $news_date);
     }
+/*
+    public function splitStartDate($start_date)
+    {
+        return explode('-', $start_date);
+    }
 
+    public function splitEndDate($end_date)
+    {
+        return explode('-', $end_date);
+    }
+*/
     /**
      * POSTされたランクの値を取得する
      * @param Integer $news_id
