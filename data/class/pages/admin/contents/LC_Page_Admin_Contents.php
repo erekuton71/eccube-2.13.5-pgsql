@@ -183,6 +183,7 @@ class LC_Page_Admin_Contents extends LC_Page_Admin_Ex
         $objErr->doFunc(array('日付', 'year', 'month', 'day'), array('CHECK_DATE'));
         $objErr->doFunc(array('表示開始期限', 'start_year', 'start_month', 'start_day'), array('CHECK_DATE'));
         $objErr->doFunc(array('表示終了期限', 'end_year', 'end_month', 'end_day'), array('CHECK_DATE'));
+        $objErr->doFunc(array('表示開始期限', '表示終了期限', 'start_year', 'start_month', 'start_day', 'end_year', 'end_month', 'end_day'), array('CHECK_SET_TERM'));
 
 
         return $objErr->arrErr;
