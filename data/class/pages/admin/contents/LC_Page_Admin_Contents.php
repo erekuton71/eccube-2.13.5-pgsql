@@ -48,16 +48,6 @@ class LC_Page_Admin_Contents extends LC_Page_Admin_Ex
             'month' => date('n'),
             'day' => date('j'),
         );
-        /*$this->arrFormStart = array(
-            'start_year' => date('Y'),
-            'start_month' => date('n'),
-            'start_day' => date('j'),
-        );
-        $this->arrFormEnd = array(
-            'end_year' => date('Y'),
-            'end_month' => date('n'),
-            'end_day' => date('j'),
-        );*/
         $this->tpl_maintitle = 'コンテンツ管理';
         $this->tpl_subtitle = '新着情報管理';
         //---- 日付プルダウン設定
@@ -122,6 +112,8 @@ class LC_Page_Admin_Contents extends LC_Page_Admin_Ex
             case 'pre_edit':
                 $news = $objNews->getNews($news_id);
                 list($news['year'],$news['month'],$news['day']) = $this->splitNewsDate($news['cast_news_date']);
+                list($news['start_year'],$news['start_month'],$news['start_day']) = $this->splitNewsDate($news['cast_start_date']);
+                list($news['end_year'],$news['end_month'],$news['end_day']) = $this->splitNewsDate($news['cast_end_date']);
                 $objFormParam->setParam($news);
 
                 // POSTデータを引き継ぐ
@@ -285,24 +277,14 @@ class LC_Page_Admin_Contents extends LC_Page_Admin_Ex
     }
 
     /**
-     * ニュースの日付、表示開始期限、表示終了期限の値をフロントでの表示形式に合わせるために分割
+     * ニュースの日付の値をフロントでの表示形式に合わせるために分割
      * @param String $news_date,$start_date,$end_date
      */
     public function splitNewsDate($news_date)
     {
         return explode('-', $news_date);
     }
-/*
-    public function splitStartDate($start_date)
-    {
-        return explode('-', $start_date);
-    }
 
-    public function splitEndDate($end_date)
-    {
-        return explode('-', $end_date);
-    }
-*/
     /**
      * POSTされたランクの値を取得する
      * @param Integer $news_id
