@@ -36,3 +36,102 @@ login_id = admin(0)[p1l9ptnj51qkjhe18k9jgs0qt0]
 /vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
 /vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
 /vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2017/03/08 23:46:18 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_ERROR): Call to undefined method SC_CheckError_Ex::HECK_DATE() on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_CheckError.php(51)] from 192.168.55.1
+login_id = admin(0)[p1l9ptnj51qkjhe18k9jgs0qt0]
+2017/03/09 00:47:43 [/eccube-2.13.5-pgsql/html/admin/total/index.php] Warning(E_WARNING): Missing argument 4 for LC_Page_Admin_Total::lfGetWhereMember(), called in /vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/total/LC_Page_Admin_Total.php on line 686 and defined on [/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/total/LC_Page_Admin_Total.php(489)] from 192.168.55.1
+2017/03/09 00:47:43 [/eccube-2.13.5-pgsql/html/admin/total/index.php] Warning(E_WARNING): array_key_exists() expects parameter 2 to be array, null given on [/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/total/LC_Page_Admin_Total.php(749)] from 192.168.55.1
+2017/03/09 00:47:43 [/eccube-2.13.5-pgsql/html/admin/total/index.php] Warning(E_WARNING): Division by zero on [/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/total/LC_Page_Admin_Total.php(816)] from 192.168.55.1
+2017/03/09 01:19:46 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_ERROR): Call to undefined method LC_Page_Admin_Contents_Ex::splitStartDate() on [/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(125)] from 192.168.55.1
+login_id = admin(0)[p1l9ptnj51qkjhe18k9jgs0qt0]
+2017/03/09 01:19:55 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_ERROR): Call to undefined method LC_Page_Admin_Contents_Ex::splitStartDate() on [/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(125)] from 192.168.55.1
+login_id = admin(0)[p1l9ptnj51qkjhe18k9jgs0qt0]
+2017/03/09 01:21:25 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_ERROR): Call to undefined method LC_Page_Admin_Contents_Ex::splitStartDate() on [/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(125)] from 192.168.55.1
+login_id = admin(0)[p1l9ptnj51qkjhe18k9jgs0qt0]
+2017/03/09 01:22:25 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_ERROR): Call to undefined method LC_Page_Admin_Contents_Ex::splitStartDate() on [/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(125)] from 192.168.55.1
+login_id = admin(0)[p1l9ptnj51qkjhe18k9jgs0qt0]
+2017/03/09 09:30:23 [/eccube-2.13.5-pgsql/html/index.php] Fatal error(E_USER_ERROR): Smarty error: [in /vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/frontparts/bloc/news.tpl line 44]: syntax error: mismatched tag {/section}. expected {/if} (opened line 31). (Smarty_Compiler.class.php, line 2338) on [/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1094)] from 192.168.55.1
+customer_id = 
+/vagrant/www/eccube-2.13.5-pgsql/html/index.php(28): LC_Page_Index_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/LC_Page_Index_Ex.php(54): LC_Page_Index->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/LC_Page_Index.php(54): LC_Page->sendResponse
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/LC_Page.php(155): SC_Display->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Display.php(80): SC_View->getResponse
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_View.php(105): Smarty->fetch
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1264): include
+/vagrant/www/eccube-2.13.5-pgsql/data/Smarty/templates_c/default/%%F1^F15^F158E3F4%%site_frame.tpl.php(98): Smarty->_smarty_include
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1870): include
+/vagrant/www/eccube-2.13.5-pgsql/data/Smarty/templates_c/default/%%58^587^5876E692%%site_main.tpl.php(45): smarty_core_smarty_include_php
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/internals/core.smarty_include_php.php(40): Smarty->_include
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1924): include
+/vagrant/www/eccube-2.13.5-pgsql/html/frontparts/bloc/news.php(29): LC_Page_FrontParts_Bloc_News_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/frontparts/bloc/LC_Page_FrontParts_Bloc_News_Ex.php(54): LC_Page_FrontParts_Bloc_News->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/frontparts/bloc/LC_Page_FrontParts_Bloc_News.php(53): LC_Page->sendResponse
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/LC_Page.php(155): SC_Display->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Display.php(80): SC_View->getResponse
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_View.php(105): Smarty->fetch
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1262): Smarty->_compile_resource
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1423): Smarty->_compile_source
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1490): Smarty_Compiler->_compile_file
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty_Compiler.class.php(312): Smarty_Compiler->_compile_tag
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty_Compiler.class.php(517): Smarty_Compiler->_pop_tag
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty_Compiler.class.php(2338): Smarty_Compiler->_syntax_error
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty_Compiler.class.php(2256): Smarty->_trigger_fatal_error
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1816): Smarty->trigger_error
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1094): trigger_error
+2017/03/09 10:38:22 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date, cast(start_date as date) as cast_start_date, cast(end_date as date) as cast_end_date FROM dtb_news WHERE del_flg = 0AND TO_CHAR(start_date, 'YYYYMMDD') <= $1 AND TO_CHAR(end_date, 'YYYYMMDD') >= $2  ORDER BY rank DESC ]
+PlaceHolder: [array (
+)]
+MDB2 Error: not found
+[Error message: Unable to bind to missing placeholder: 0]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[i1ma0gim5sg93g16go64tl6to7]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(54): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(67): LC_Page_Admin_Contents->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(158): SC_Helper_News->getList
+/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_News.php(82): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(309): SC_Query->execute
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1056): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2017/03/09 10:55:52 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date, cast(start_date as date) as cast_start_date, cast(end_date as date) as cast_end_date FROM dtb_news WHERE del_flg = 0CURRENT_TIMESTAMP between start_date and end_date  ORDER BY rank DESC ]
+MDB2 Error: syntax error
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_2abc0221f6674c370bfe2633ea7911f22c39c86a3]
+[Native message: ERROR:  syntax error at or near "CURRENT_TIMESTAMP"
+行 1: ...) as cast_end_date FROM dtb_news WHERE del_flg = 0CURRENT_TI...
+                                                           ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[i1ma0gim5sg93g16go64tl6to7]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(54): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(67): LC_Page_Admin_Contents->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(158): SC_Helper_News->getList
+/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_News.php(82): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2017/03/09 10:56:25 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date, cast(start_date as date) as cast_start_date, cast(end_date as date) as cast_end_date FROM dtb_news WHERE del_flg = 0CURRENT_TIMESTAMP between start_date and end_date  ORDER BY rank DESC ]
+MDB2 Error: syntax error
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_23be7b5ff3022cee87cd816a09b7cff3500ad76d8]
+[Native message: ERROR:  syntax error at or near "CURRENT_TIMESTAMP"
+行 1: ...) as cast_end_date FROM dtb_news WHERE del_flg = 0CURRENT_TI...
+                                                           ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[i1ma0gim5sg93g16go64tl6to7]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(54): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(67): LC_Page_Admin_Contents->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(158): SC_Helper_News->getList
+/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_News.php(82): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2017/03/09 12:57:22 [/eccube-2.13.5-pgsql/html/index.php] Fatal error(E_PARSE): syntax error, unexpected '=' on [/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/frontparts/bloc/LC_Page_FrontParts_Bloc_News.php(127)] from 192.168.55.1
+customer_id = 
