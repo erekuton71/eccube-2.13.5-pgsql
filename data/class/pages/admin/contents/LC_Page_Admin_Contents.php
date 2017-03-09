@@ -237,7 +237,7 @@ class LC_Page_Admin_Contents extends LC_Page_Admin_Ex
     }
 
     /**
-     * 表示終了期限を返す。
+     * 表示開始期限を返す。
      * @param  Array  $arrPost POSTのグローバル変数
      * @return string 表示開始期限を示す文字列
      */
