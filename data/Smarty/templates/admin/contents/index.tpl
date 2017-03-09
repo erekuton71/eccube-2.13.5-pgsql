@@ -105,7 +105,7 @@
                     <option value="" selected="selected">--</option>
                     <!--{html_options options=$arrMonth selected=$arrForm.end_month.value}-->
                     </select>月
-                    <select name="end_day" <!--{if $arrErr.year || $arrErr.month || $arrErr.day}-->style="background-color:<!--{$smarty.const.ERR_COLOR|h}-->"<!--{/if}-->>
+                    <select name="end_day" <!--{if $arrErr.end_year || $arrErr.end_month || $arrErr.end_day}-->style="background-color:<!--{$smarty.const.ERR_COLOR|h}-->"<!--{/if}-->>
                     <option value="" selected="selected">--</option>
                     <!--{html_options options=$arrDay selected=$arrForm.end_day.value}-->
                     </select>日
